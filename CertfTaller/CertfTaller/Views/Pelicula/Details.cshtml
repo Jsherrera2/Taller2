@@ -1,0 +1,50 @@
+﻿@model BEUEjercicio.Pelicula
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Pelicula</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nombre_peli)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombre_peli)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.fecha_lanzamiento_peli)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fecha_lanzamiento_peli)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.categoria_pel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.categoria_pel)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.duracion_peli)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.duracion_peli)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id_pel }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DBPLEXModelStoreContainer" CdmEntityContainer="Entities">
+    <EntitySetMapping Name="Peliculas">
+      <EntityTypeMapping TypeName="DBPLEXModel.Pelicula">
+        <MappingFragment StoreEntitySet="Pelicula">
+          <ScalarProperty Name="id_pel" ColumnName="id_pel" />
+          <ScalarProperty Name="nombre_peli" ColumnName="nombre_peli" />
+          <ScalarProperty Name="fecha_lanzamiento_peli" ColumnName="fecha_lanzamiento_peli" />
+          <ScalarProperty Name="categoria_pel" ColumnName="categoria_pel" />
+          <ScalarProperty Name="duracion_peli" ColumnName="duracion_peli" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

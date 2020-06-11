@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DBPLEXModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'DBPLEX.dbo.Pelicula' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="Pelicula">
+    <Key>
+      <PropertyRef Name="id_pel" />
+    </Key>
+    <Property Name="id_pel" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre_peli" Type="varchar" MaxLength="100" />
+    <Property Name="fecha_lanzamiento_peli" Type="date" />
+    <Property Name="categoria_pel" Type="varchar" MaxLength="70" />
+    <Property Name="duracion_peli" Type="int" />
+  </EntityType>
+  <EntityContainer Name="DBPLEXModelStoreContainer">
+    <EntitySet Name="Pelicula" EntityType="Self.Pelicula" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Pelicula].[id_pel] AS [id_pel], 
+    [Pelicula].[nombre_peli] AS [nombre_peli], 
+    [Pelicula].[fecha_lanzamiento_peli] AS [fecha_lanzamiento_peli], 
+    [Pelicula].[categoria_pel] AS [categoria_pel], 
+    [Pelicula].[duracion_peli] AS [duracion_peli]
+    FROM [dbo].[Pelicula] AS [Pelicula]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>
